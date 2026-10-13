@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Танчики 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="top-hud">
+            <div class="hud-item score-display">
+                <span id="score">0</span>
+            </div>
+            <div class="hud-item high-score-display">
+                <span>РЕКОРД: </span>
+                <span id="high-score">0</span>
+            </div>
+            <div class="hud-item lives-display">
+                <span id="lives">3</span>
+                <span> ❤</span>
+            </div>
+            <div class="hud-item sound-toggle" id="sound-toggle" title="Вкл/Выкл звук">
+                <span id="sound-icon">🔊</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="bottom-hud">
+            <div id="health-bar-container">
+                <div id="health-bar"></div>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="hidden">
+            <h1>ИГРА ОКОНЧЕНА</h1>
+            <p>Ваш счет: <span id="final-score">0</span></p>
+            <p>Рекорд: <span id="final-high-score">0</span></p>
+            <button id="restart-btn">ИГРАТЬ СНОВА</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
